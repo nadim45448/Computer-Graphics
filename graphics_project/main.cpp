@@ -98,6 +98,31 @@ void ground()
      rectangle(-300,-300,300,-10);  //(x,y,x1,y1)-->(x,y),(x,y1),(x1,y1),(x1,y)
 }
 
+void road()
+{
+        //Road Area
+        glColor3f(0.3, 0.3, 0.3);
+        rectangle(-300,-200,300,-30);
+        //road side broader up
+        glColor3f(0.0, 0.0, 0.0);
+        rectangle(-300,-30,300,-33);
+        //road side broader down
+        glColor3f(0.0, 0.0, 0.0);
+        rectangle(-300,-205,300,-200);
+        //divider 1st
+        glColor3f(1.0, 1.0, 1.0);
+        rectangle(-270,-120,-230,-110);
+        //divider 2nd
+        glColor3f(1.0, 1.0, 1.0);
+        rectangle(-150,-120,0,-110);
+        //divider  3rd
+        glColor3f(1.0, 1.0, 1.0);
+        rectangle(50,-120,150,-110);
+        //divider  4th
+        glColor3f(1.0, 1.0, 1.0);
+        rectangle(200,-120,290,-110);
+}
+
 
 
 
@@ -109,6 +134,7 @@ void myDisplay()
     hill();
     soil();
     ground();
+    road();
 
 
     glFlush();
