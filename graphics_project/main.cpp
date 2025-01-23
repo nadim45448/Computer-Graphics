@@ -55,6 +55,8 @@ void rectangle(int x, int y, int x1, int y1)
     glVertex2d(x1,y1); // Opposite corner of (x, y).
     glVertex2d(x1,y); // Corner directly to the right or left of (x, y), aligned horizontally.
     glEnd();
+
+    // soil, ground
 }
 
 void triangle(int x, int y, int x1, int x2,int y1)
@@ -90,6 +92,11 @@ void soil()
     rectangle(-300,-10,300,130);
 }
 
+void ground()
+{
+     glColor3f(0.72, 0.56, 0.26);  //Bottom part
+     rectangle(-300,-300,300,-10);  //(x,y,x1,y1)-->(x,y),(x,y1),(x1,y1),(x1,y)
+}
 
 
 
@@ -101,6 +108,7 @@ void myDisplay()
     sun();
     hill();
     soil();
+    ground();
 
 
     glFlush();
