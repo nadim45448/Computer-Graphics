@@ -35,6 +35,16 @@ void sun()
     glPopMatrix();
 }
 
+void hill()
+{
+    glColor3f(0.5, 0.87, 1.0);
+    circle(70,120,-250,90);
+    circle(70,120,-100,90);
+    circle(70,120,50,100);
+    circle(70,120,200,90);
+}
+
+
 void rectangle(int x, int y, int x1, int y1)
 {
     // glVertex2d()-> avoid z coordinates.rendiring shapes in 2d
@@ -74,13 +84,10 @@ void rectangle1(int x1,int y1, int x2, int y2, int x3, int y3, int x4, int y4)
         glEnd();
 }
 
-void hill()
+void soil()
 {
-    glColor3f(0.5, 0.87, 1.0);
-    circle(70,120,-250,90);
-    circle(70,120,-100,90);
-    circle(70,120,50,100);
-    circle(70,120,200,90);
+    glColor3f(0.75, 0.75, 0.75);
+    rectangle(-300,-10,300,130);
 }
 
 
@@ -93,6 +100,7 @@ void myDisplay()
 
     sun();
     hill();
+    soil();
 
 
     glFlush();
