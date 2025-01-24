@@ -268,7 +268,7 @@ void myDisplay()
     tree1(); // 18 small tree
     tree2(); // 3 big tree
     college();
-   // hospital();
+    hospital();
 
 
     glFlush();
