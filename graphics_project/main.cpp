@@ -197,7 +197,63 @@ void tree2()
     glPopMatrix();
 
 }
+void college()
+{
+    glColor3f(0.73, 0.94, 0.32); //Front Show
+    rectangle(-100,-9,60,120);
+    glColor3f(0.96, 0.96, 0.37); //Top
+    rectangle1(-100,120,60,120,-90,140,70,140);
+    glColor3f(0.4, 1.0, 1.0); //Side show
+    rectangle1(60,-9,70,0,60,120,70,140);
 
+        glColor3f(0, 0, 0); //Windows
+        rectangle(-90,100,-70,80);
+        rectangle(-60,100,-40,80);
+        rectangle(-35,-9,-5,30); //door
+        rectangle(-30,100,-10,80);
+        rectangle(0,100,20,80);
+        rectangle(30,100,50,80);
+
+        rectangle(-90,70,-70,50);
+        rectangle(-60,70,-40,50);
+        rectangle(-30,70,-10,50);
+        rectangle(0,70,20,50);
+        rectangle(30,70,50,50);
+}
+
+void hospital()
+{
+    glColor3f(0.97, 0.28, 0.09);  //Front show
+    rectangle(-210,-9,-120,150);
+    glColor3f(0.92, 0.49, 0.06); //Top
+    rectangle1(-210,150,-120,150,-190,170,-110,170);
+    glColor3f(0.09, 0.47, 0.89); // Side
+    rectangle1(-120,-9,-110,0,-120,150,-110,170);
+
+
+        glColor3f(1, 0.31, 1);  //window
+        rectangle(-170,-9,-155,10); // hospital gate...
+
+        rectangle(-140,130,-125,110);  //Right top
+        rectangle(-140,100,-125,80);
+        rectangle(-140,70,-125,50);
+        rectangle(-140,40,-125,20);
+
+        rectangle(-160,130,-145,110);
+        rectangle(-160,100,-145,80);
+        rectangle(-160,70,-145,50);
+        rectangle(-160,40,-145,20);
+
+        rectangle(-180,130,-165,110);
+       rectangle(-180,100,-165,80);
+        rectangle(-180,70,-165,50);
+        rectangle(-180,40,-165,20);
+
+        rectangle(-200,130,-185,110); //Left top
+        rectangle(-200,100,-185,80);
+        rectangle(-200,70,-185,50);
+        rectangle(-200,40,-185,20);
+}
 
 
 void myDisplay()
@@ -211,6 +267,8 @@ void myDisplay()
     road();
     tree1(); // 18 small tree
     tree2(); // 3 big tree
+    college();
+   // hospital();
 
 
     glFlush();
