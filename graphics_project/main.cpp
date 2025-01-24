@@ -255,6 +255,24 @@ void hospital()
         rectangle(-200,40,-185,20);
 }
 
+void house()
+{
+    glColor3f(0.77, 1.0, 0.77); //Front Show
+    rectangle1(200,-9,350,-9,200,80,350,80);
+    rectangle1(200,80,250,80,200,120,250,120);
+
+    glColor3f(0.0f, 0.1f, 0.0f); //Top
+    triangle(195,120,255,225,150);
+
+
+    glColor3f(0.97, 0.65, 0.14); //Window small one
+    rectangle1(215,95,235,95,215,115,235,115);
+
+    glColor3f(0., 0.1, 0.1); //Door
+    rectangle1(220,-9,250,-9,220,40,250,40);
+
+}
+
 
 void myDisplay()
 {
@@ -269,6 +287,7 @@ void myDisplay()
     tree2(); // 3 big tree
     college();
     hospital();
+    house();
 
 
     glFlush();
