@@ -79,11 +79,11 @@ void triangle(int x, int y, int x1, int x2,int y1)
 void rectangle1(int x1,int y1, int x2, int y2, int x3, int y3, int x4, int y4)
 {
     glBegin(GL_QUADS);
-        glVertex2d(x1,y1);
-        glVertex2d(x3,y3);
-        glVertex2d(x4,y4);
-        glVertex2d(x2,y2);
-        glEnd();
+    glVertex2d(x1,y1);
+    glVertex2d(x3,y3);
+    glVertex2d(x4,y4);
+    glVertex2d(x2,y2);
+    glEnd();
 }
 
 void soil()
@@ -94,40 +94,40 @@ void soil()
 
 void ground()
 {
-     glColor3f(0.72, 0.56, 0.26);  //Bottom part
-     rectangle(-300,-300,300,-10);  //(x,y,x1,y1)-->(x,y),(x,y1),(x1,y1),(x1,y)
+    glColor3f(0.72, 0.56, 0.26);  //Bottom part
+    rectangle(-300,-300,300,-10);  //(x,y,x1,y1)-->(x,y),(x,y1),(x1,y1),(x1,y)
 }
 
 void road()
 {
-        //Road Area
-        glColor3f(0.3, 0.3, 0.3);
-        rectangle(-300,-200,300,-30);
-        //road side broader up
-        glColor3f(0.0, 0.0, 0.0);
-        rectangle(-300,-30,300,-33);
-        //road side broader down
-        glColor3f(0.0, 0.0, 0.0);
-        rectangle(-300,-205,300,-200);
-        //divider 1st
-        glColor3f(1.0, 1.0, 1.0);
-        rectangle(-270,-120,-230,-110);
-        //divider 2nd
-        glColor3f(1.0, 1.0, 1.0);
-        rectangle(-150,-120,0,-110);
-        //divider  3rd
-        glColor3f(1.0, 1.0, 1.0);
-        rectangle(50,-120,150,-110);
-        //divider  4th
-        glColor3f(1.0, 1.0, 1.0);
-        rectangle(200,-120,290,-110);
+    //Road Area
+    glColor3f(0.3, 0.3, 0.3);
+    rectangle(-300,-200,300,-30);
+    //road side broader up
+    glColor3f(0.0, 0.0, 0.0);
+    rectangle(-300,-30,300,-33);
+    //road side broader down
+    glColor3f(0.0, 0.0, 0.0);
+    rectangle(-300,-205,300,-200);
+    //divider 1st
+    glColor3f(1.0, 1.0, 1.0);
+    rectangle(-270,-120,-230,-110);
+    //divider 2nd
+    glColor3f(1.0, 1.0, 1.0);
+    rectangle(-150,-120,0,-110);
+    //divider  3rd
+    glColor3f(1.0, 1.0, 1.0);
+    rectangle(50,-120,150,-110);
+    //divider  4th
+    glColor3f(1.0, 1.0, 1.0);
+    rectangle(200,-120,290,-110);
 }
-void tree(int a,int b,int c,int d, int e,int f,int g, int h , int i)
+void tree(int a,int b,int c,int d, int e,int f,int g, int h, int i)
 {
-   glColor3f(0.0, 0.0, 0.0);
-   rectangle(a,b,c,d);
-   glColor3f(0.0, 0.5, 0.0);
-   triangle(e,f,g,h,i);
+    glColor3f(0.0, 0.0, 0.0);
+    rectangle(a,b,c,d);
+    glColor3f(0.0, 0.5, 0.0);
+    triangle(e,f,g,h,i);
 
 }
 void tree1()
@@ -187,7 +187,7 @@ void tree2()
     // 2nd big tree
     glPushMatrix();
     glTranslated(100,120,0);
-   make_tree2();
+    make_tree2();
     glPopMatrix();
 
     //3rd big tree
@@ -206,19 +206,19 @@ void college()
     glColor3f(0.4, 1.0, 1.0); //Side show
     rectangle1(60,-9,70,0,60,120,70,140);
 
-        glColor3f(0, 0, 0); //Windows
-        rectangle(-90,100,-70,80);
-        rectangle(-60,100,-40,80);
-        rectangle(-35,-9,-5,30); //door
-        rectangle(-30,100,-10,80);
-        rectangle(0,100,20,80);
-        rectangle(30,100,50,80);
+    glColor3f(0, 0, 0); //Windows
+    rectangle(-90,100,-70,80);
+    rectangle(-60,100,-40,80);
+    rectangle(-35,-9,-5,30); //door
+    rectangle(-30,100,-10,80);
+    rectangle(0,100,20,80);
+    rectangle(30,100,50,80);
 
-        rectangle(-90,70,-70,50);
-        rectangle(-60,70,-40,50);
-        rectangle(-30,70,-10,50);
-        rectangle(0,70,20,50);
-        rectangle(30,70,50,50);
+    rectangle(-90,70,-70,50);
+    rectangle(-60,70,-40,50);
+    rectangle(-30,70,-10,50);
+    rectangle(0,70,20,50);
+    rectangle(30,70,50,50);
 }
 
 void hospital()
@@ -231,28 +231,28 @@ void hospital()
     rectangle1(-120,-9,-110,0,-120,150,-110,170);
 
 
-        glColor3f(1, 0.31, 1);  //window
-        rectangle(-170,-9,-155,10); // hospital gate...
+    glColor3f(1, 0.31, 1);  //window
+    rectangle(-170,-9,-155,10); // hospital gate...
 
-        rectangle(-140,130,-125,110);  //Right top
-        rectangle(-140,100,-125,80);
-        rectangle(-140,70,-125,50);
-        rectangle(-140,40,-125,20);
+    rectangle(-140,130,-125,110);  //Right top
+    rectangle(-140,100,-125,80);
+    rectangle(-140,70,-125,50);
+    rectangle(-140,40,-125,20);
 
-        rectangle(-160,130,-145,110);
-        rectangle(-160,100,-145,80);
-        rectangle(-160,70,-145,50);
-        rectangle(-160,40,-145,20);
+    rectangle(-160,130,-145,110);
+    rectangle(-160,100,-145,80);
+    rectangle(-160,70,-145,50);
+    rectangle(-160,40,-145,20);
 
-        rectangle(-180,130,-165,110);
-       rectangle(-180,100,-165,80);
-        rectangle(-180,70,-165,50);
-        rectangle(-180,40,-165,20);
+    rectangle(-180,130,-165,110);
+    rectangle(-180,100,-165,80);
+    rectangle(-180,70,-165,50);
+    rectangle(-180,40,-165,20);
 
-        rectangle(-200,130,-185,110); //Left top
-        rectangle(-200,100,-185,80);
-        rectangle(-200,70,-185,50);
-        rectangle(-200,40,-185,20);
+    rectangle(-200,130,-185,110); //Left top
+    rectangle(-200,100,-185,80);
+    rectangle(-200,70,-185,50);
+    rectangle(-200,40,-185,20);
 }
 
 void house()
@@ -272,7 +272,8 @@ void house()
     rectangle1(220,-9,250,-9,220,40,250,40);
 
 }
-void makePrivateCar(){
+void makePrivateCar()
+{
 
     glColor3f(1.0, 0.0, 0.0);
     circle(5,15,0,0);        // back circle
@@ -304,23 +305,24 @@ void makePrivateCar(){
 
 }
 
-void privatecarMove(){
+void privatecarMove()
+{
 // cm= -300 (-x to x)
-cm=cm+.5;
+    cm=cm+.5;
     if(cm>330)
         cm = -350;
-        glutPostRedisplay();
+    glutPostRedisplay();
 }
 
 void privatecar()
 {
 
-     glPushMatrix();
-     glTranslatef(cm,-50,0);
-     makePrivateCar();
-     glPopMatrix();
+    glPushMatrix();
+    glTranslatef(cm,-50,0);
+    makePrivateCar();
+    glPopMatrix();
 
-   privatecarMove();
+    privatecarMove();
 }
 
 void busmake()
@@ -360,20 +362,21 @@ void busmake()
     circle(6,12,-70,-15);
 
 }
-void busMove(){
+void busMove()
+{
     //bm= 400 (x to -x)
-bm=bm-.4;
+    bm=bm-.4;
     if(bm<-350)
         bm = 350;
 
-        glutPostRedisplay();
+    glutPostRedisplay();
 }
 void bus()
 {
-     glPushMatrix();
-     glTranslatef(bm,-165,0);
-     busmake();
-     glPopMatrix();
+    glPushMatrix();
+    glTranslatef(bm,-165,0);
+    busmake();
+    glPopMatrix();
     // busMove();
 
 }
@@ -387,7 +390,8 @@ void railLine()
 
     glColor3f(0.3, 0.3, 0.3);
     glBegin(GL_QUADS);
-    for(i=-305;i<=300;i=i+30){
+    for(i=-305; i<=300; i=i+30)
+    {
 
         glVertex2d(i,-260);
         glVertex2d(i+5,-260);
@@ -396,6 +400,74 @@ void railLine()
     }
     glEnd();
 }
+
+void makerail()
+{
+    glColor3f(1, 0, 0);
+    circle(8,15,-70,-2);
+    circle(8,15,-53,-2);
+
+    circle(8,15,-20,-2);
+    circle(8,15,-3,-2);
+
+    circle(8,15,30,-2);
+    circle(8,15,47,-2);
+
+    circle(8,15,75,-2);
+    circle(8,15,93,-2);
+
+    rectangle(-70,0,-70,2);
+
+
+    glColor3f(1, 1, 1);
+    rectangle(-70,0,100,60);
+    glColor3f(0.4, 0.4, 0.4);
+    rectangle1(-100,0,-70,0,-100,20,-70,60);
+    glColor3f(0.75, 0.75, 0.75);
+    rectangle1(-70,60,100,60,-75,70,105,70);
+    glColor3f(1.0, 1.0, 0.7);
+    rectangle1(100,0,104,10,100,60,105,70);
+    glColor3f(0.6, 0.87, 1.0);
+    rectangle1(-100,20,-70,60,-95,35,-75,70);
+    glColor3f(0.4, 0.4, 0.4);
+    circle(12,15,-97,15);      //Front part
+
+
+    glColor3f(0, 1, 1);
+    rectangle(-60,10,-50,50);
+    rectangle(-45,30,-35,50);
+    rectangle(-30,30,-20,50);
+    rectangle(-15,30,-5,50);
+
+    rectangle(0,10,10,50);
+    rectangle(15,30,25,50);
+    rectangle(30,30,40,50);
+    rectangle(45,30,55,50);
+
+    rectangle(60,10,70,50);
+    rectangle(75,30,85,50);
+    rectangle(90,30,99,50);
+    rectangle(-70,0,-70,2);
+}
+
+void trainMove()
+{
+    // tm=300 (x to -x)
+    tm=tm-1;
+    if(tm<-350)
+        tm = 350;
+    glutPostRedisplay();
+}
+
+void train()
+{
+    trainMove();
+    glPushMatrix();
+    glTranslatef(tm,-245,0);
+    makerail();
+    glPopMatrix();
+}
+
 
 
 
@@ -416,6 +488,8 @@ void myDisplay()
     privatecar();
     bus();
     railLine();
+    train();
+
 
 
     glFlush();
