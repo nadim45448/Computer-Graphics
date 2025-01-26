@@ -378,6 +378,26 @@ void bus()
 
 }
 
+void railLine()
+{
+    glColor3f(0,0,0);
+    rectangle(-300,-230,300,-225);
+    rectangle(-300,-260,300,-265);
+    int i = 0;
+
+    glColor3f(0.3, 0.3, 0.3);
+    glBegin(GL_QUADS);
+    for(i=-305;i<=300;i=i+30){
+
+        glVertex2d(i,-260);
+        glVertex2d(i+5,-260);
+        glVertex2d(i+20,-225);
+        glVertex2d(i+25,-225);
+    }
+    glEnd();
+}
+
+
 
 void myDisplay()
 {
@@ -395,6 +415,7 @@ void myDisplay()
     house();
     privatecar();
     bus();
+    railLine();
 
 
     glFlush();
