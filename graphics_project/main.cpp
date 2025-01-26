@@ -5,10 +5,10 @@
 #include <GL/gl.h>
 #include<math.h>
 
-//positions of the bus, plane, car, and train.
+//positions of the car, bus, plane and train.
+static float    cm=  -300.0; //for car
 static float    bm=  400.0;  //for bus
 static float    pm=  300.0; // for plane
-static float    cm=  -300.0; //for car
 static float    tm=  300.0; // for Train
 
 
@@ -305,7 +305,7 @@ void makePrivateCar(){
 }
 
 void privatecarMove(){
-
+// cm= -300 (-x to x)
 cm=cm+.5;
     if(cm>330)
         cm = -350;
@@ -323,6 +323,62 @@ void privatecar()
    privatecarMove();
 }
 
+void busmake()
+{
+    glColor3f(0.9, 0.72, 0.0);
+    rectangle(-60,-15,0,15);
+    rectangle(-80,-15,-60,25);
+    glColor3f(0, 0, 0);
+    rectangle(-60,15,-2,50);
+    rectangle(-70,25,-60,50);
+    glColor3f(0.76, 0.84, 0.84);
+    rectangle1(-2,50,-70,50,-7,55,-76,55);
+
+    glColor3f(0.2, 0.8, 1.0);
+    rectangle1(-70,25,-74,25,-70,50,-76,55);
+
+
+    glColor3f(1, 1, 1.0);
+    rectangle(-58,0,-50,35);     //door
+    glColor3f(0.2, 0.8, 1.0);
+    rectangle(-45,30,-40,40);    //four windows serially
+    rectangle(-35,30,-30,40);
+    rectangle(-25,30,-20,40);
+    rectangle(-15,30,-10,40);
+
+
+    glColor3f(0.9, 0.72, 0.0);
+    circle(3,15,0,0);           //back part
+    circle(3,20,-80,5);         // front part
+
+    glColor3f(0, 0, 0);           //tire border
+    circle(8,16,-10,-15);
+    circle(8,16,-70,-15);
+
+    glColor3f(1, 1, 1);             //tire
+    circle(6,12,-10,-15);
+    circle(6,12,-70,-15);
+
+}
+void busMove(){
+    //bm= 400 (x to -x)
+bm=bm-.4;
+    if(bm<-350)
+        bm = 350;
+
+        glutPostRedisplay();
+}
+void bus()
+{
+     glPushMatrix();
+     glTranslatef(bm,-165,0);
+     busmake();
+     glPopMatrix();
+    // busMove();
+
+}
+
+
 void myDisplay()
 {
     glClear(GL_COLOR_BUFFER_BIT);
@@ -338,6 +394,7 @@ void myDisplay()
     hospital();
     house();
     privatecar();
+    bus();
 
 
     glFlush();
