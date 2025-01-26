@@ -272,7 +272,56 @@ void house()
     rectangle1(220,-9,250,-9,220,40,250,40);
 
 }
+void makePrivateCar(){
 
+    glColor3f(1.0, 0.0, 0.0);
+    circle(5,15,0,0);        // back circle
+    rectangle(0,-15,60,15);  //Middle part
+
+
+    glColor3f(0.2, 0.47, 1.0);
+    triangle(5,15,20,20,45);
+    triangle(40,15,60,40,45);
+
+
+    glColor3f(0, 0, 0);
+    rectangle(20,15,40,45);  //sunroof
+
+    glColor3f(1.0, 0.0, 0.0);
+    circle(5,10,80,-5);        //front circle
+
+    glColor3f(1.0, 0.0, 0.0);
+    rectangle1(60,-15,80,-15,60,15,80,5);  //front part
+
+    glColor3f(0, 0, 0);
+    circle(7,14,10,-15);
+    circle(7,14,60,-15);      //tire
+
+    glColor3f(1.0, 1.0, 1.0);
+    circle(6,12,10,-15);      //tire border
+    circle(6,12,60,-15);
+
+
+}
+
+void privatecarMove(){
+
+cm=cm+.5;
+    if(cm>330)
+        cm = -350;
+        glutPostRedisplay();
+}
+
+void privatecar()
+{
+
+     glPushMatrix();
+     glTranslatef(cm,-50,0);
+     makePrivateCar();
+     glPopMatrix();
+
+   privatecarMove();
+}
 
 void myDisplay()
 {
@@ -288,6 +337,7 @@ void myDisplay()
     college();
     hospital();
     house();
+    privatecar();
 
 
     glFlush();
