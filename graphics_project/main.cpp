@@ -610,6 +610,21 @@ void hospital_n(){
         rectangle(-200,70,-185,50);
         rectangle(-200,40,-185,20);
 }
+void house_n(){
+    glColor3f(0.1f, 0.1f, 1.0f); //Front Show
+    rectangle1(200,-9,350,-9,200,80,350,80);
+    rectangle1(200,80,250,80,200,120,250,120);
+    glColor3f(0.0f, 0.1f, 0.0f); //Top triangle
+    triangle(195,120,255,225,150);
+
+
+    glColor3f(0.77, 1.0, 0.77); //Window
+    rectangle1(215,95,235,95,215,115,235,115);
+
+    glColor3f(0.77, 1.0, 0.77); //Door
+    rectangle1(220,-9,250,-9,220,40,250,40);
+
+}
 
 
 
@@ -646,6 +661,7 @@ void night()
     tree2_n();
     college_n();
     hospital_n();
+    house_n();
 
     glFlush();
 }
