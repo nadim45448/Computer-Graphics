@@ -578,6 +578,38 @@ void college_n(){
         rectangle(0,70,20,50);
         rectangle(30,70,50,50);
 }
+void hospital_n(){
+    glColor3f(0.65, 0.28, 0.09);  //Front show
+    rectangle(-210,-9,-120,150);
+    glColor3f(0.81, 0.55, 0.05); //Top
+    rectangle1(-210,150,-120,150,-190,170,-110,170);
+    glColor3f(0.03, 0.38, 0.62); // Side
+    rectangle1(-120,-9,-110,0,-120,150,-110,170);
+
+
+        glColor3f(0.77, 1.0, 0.77);
+        rectangle(-170,-9,-155,10);
+
+        rectangle(-140,130,-125,110);  //Right top
+        rectangle(-140,100,-125,80);
+        rectangle(-140,70,-125,50);
+        rectangle(-140,40,-125,20);
+
+        rectangle(-160,130,-145,110);
+        rectangle(-160,100,-145,80);
+        rectangle(-160,70,-145,50);
+        rectangle(-160,40,-145,20);
+
+        rectangle(-180,130,-165,110);
+        rectangle(-180,100,-165,80);
+        rectangle(-180,70,-165,50);
+        rectangle(-180,40,-165,20);
+
+        rectangle(-200,130,-185,110); //Left top
+        rectangle(-200,100,-185,80);
+        rectangle(-200,70,-185,50);
+        rectangle(-200,40,-185,20);
+}
 
 
 
@@ -613,6 +645,7 @@ void night()
     tree1();
     tree2_n();
     college_n();
+    hospital_n();
 
     glFlush();
 }
