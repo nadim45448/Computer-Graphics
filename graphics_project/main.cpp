@@ -513,6 +513,49 @@ void ground_n(){
      glColor3f(0.58, 0.52, 0.05);  //Bottom part
      rectangle(-300,-300,300,-10);  //(x,y,x1,y1)-->(x,y),(x,y1),(x1,y1),(x1,y)
 }
+void make_tree2_n(){
+    //glColor3f(0.38, 0.61, 0.37);
+    glColor3f(0.0, 0.5, 0.0);
+    circle(20,30,0,0);
+    circle(20,30,20,0);
+    circle(20,30,40,0);
+    circle(20,30,30,30);    //Bigger part of the tree
+    circle(20,30,10,30);
+    circle(20,30,10,-30);
+    circle(20,30,30,-30);
+
+
+    circle(10,20,50,-70);
+    circle(10,20,60,-60);   //Small part of Tree
+    circle(10,20,60,-80);
+
+    glColor3f(0.64, 0.49,0.34);
+    rectangle1(10,-130,30,-130,10,-30,30,-30);
+    rectangle1(10,-30,17,-30,5,0,5,0);
+    rectangle1(17,-30,22,-30,19,0,19,0);
+    rectangle1(22,-30,30,-30,35,0,35,0);
+    rectangle1(30,-90,30,-100,55,-70,55,-75);
+
+}
+void tree2_n(){
+
+    glPushMatrix();
+    glTranslated(-320,120,0);
+    make_tree2_n();
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslated(100,120,0);
+    make_tree2_n();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslated(270,120,0);
+    make_tree2_n();
+    glPopMatrix();
+
+}
 
 
 
@@ -546,7 +589,7 @@ void night()
     ground_n();
     road();
     tree1();
-//    tree2_n();
+    tree2_n();
 
     glFlush();
 }
