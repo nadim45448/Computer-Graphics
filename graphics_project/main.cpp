@@ -556,6 +556,28 @@ void tree2_n(){
     glPopMatrix();
 
 }
+void college_n(){
+    glColor3f(0.61, 0.61, 0.61); //Front show
+    rectangle(-100,-9,60,120);
+    glColor3f(0.73, 0.73, 0.04); //Top
+    rectangle1(-100,120,60,120,-90,140,70,140);//top
+    glColor3f(0.04, 0.53, 0.54); //side
+    rectangle1(60,-9,70,0,60,120,70,140);
+
+        glColor3f(0.77, 1.0, 0.77); //windows
+        rectangle(-90,100,-70,80);
+        rectangle(-60,100,-40,80);
+        rectangle(-35,-9,-5,30);
+        rectangle(-30,100,-10,80);
+        rectangle(0,100,20,80);
+        rectangle(30,100,50,80);
+
+        rectangle(-90,70,-70,50);
+        rectangle(-60,70,-40,50);
+        rectangle(-30,70,-10,50);
+        rectangle(0,70,20,50);
+        rectangle(30,70,50,50);
+}
 
 
 
@@ -590,6 +612,7 @@ void night()
     road();
     tree1();
     tree2_n();
+    college_n();
 
     glFlush();
 }
