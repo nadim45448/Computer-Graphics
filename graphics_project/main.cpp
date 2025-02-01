@@ -476,6 +476,12 @@ void train()
 }
 
 //***************************Night View ***************************************//
+void sky(){
+    glColor3f(0.0, 0.0, 0.5);
+    rectangle(-300,130,300,300);
+    glutPostRedisplay();
+
+}
 
 
 
@@ -496,6 +502,14 @@ void myDisplay()
     bus();
     railLine();
     train();
+    glFlush();
+}
+void night()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    sky();
+
     glFlush();
 }
 
