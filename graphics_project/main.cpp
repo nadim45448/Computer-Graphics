@@ -662,6 +662,8 @@ void night()
     college_n();
     hospital_n();
     house_n();
+    bus();
+    privatecar();
 
     glFlush();
 }
