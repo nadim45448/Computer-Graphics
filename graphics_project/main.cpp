@@ -509,6 +509,10 @@ void soil_n(){
     glColor3f(0.31, 0.47, 0.67);
     rectangle(-300,-10,300,130);
 }
+void ground_n(){
+     glColor3f(0.58, 0.52, 0.05);  //Bottom part
+     rectangle(-300,-300,300,-10);  //(x,y,x1,y1)-->(x,y),(x,y1),(x1,y1),(x1,y)
+}
 
 
 
@@ -539,6 +543,7 @@ void night()
     moon();
     hill_n();
     soil_n();
+    ground_n();
 
     glFlush();
 }
