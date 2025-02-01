@@ -482,6 +482,22 @@ void sky(){
     glutPostRedisplay();
 
 }
+void moon(){
+    glPushMatrix();
+    // Move the moon to a position beside the sun
+    glTranslated(-160, 260, 0);
+
+    // Draw the larger outer circle (moon body)
+    glColor3f(1.0, 1.0, 1.0);  // white for the moon
+    circle(15, 30, 0, 0);  // Large circle
+
+    // Draw a smaller inner circle (to create the crescent effect)
+    glColor3f(0.0, 0.0, 0.5);  // Use a dark blue color to simulate the background
+    circle(15, 30, 5, 5);  // Smaller circle slightly offset
+
+    glPopMatrix();
+
+}
 
 
 
@@ -509,6 +525,7 @@ void night()
     glClear(GL_COLOR_BUFFER_BIT);
 
     sky();
+    moon();
 
     glFlush();
 }
