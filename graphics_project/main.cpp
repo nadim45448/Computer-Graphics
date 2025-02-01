@@ -313,7 +313,7 @@ void makePrivateCar()
 void privatecarMove()
 {
 // cm= -300 (-x to x)
-    cm=cm+.5;
+    cm=cm+0.5;
     if(cm>330)
         cm = -350;
     glutPostRedisplay();
@@ -496,7 +496,7 @@ rectangle(-5,-5,0,10);
 }
 
 void planeMove(){
-pm=pm-.5;
+pm=pm-.7;
     if(pm<-500)
         pm = 300;
         glutPostRedisplay();
