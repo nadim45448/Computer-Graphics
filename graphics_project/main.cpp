@@ -498,6 +498,17 @@ void moon(){
     glPopMatrix();
 
 }
+void hill_n(){
+    glColor3f(0.28, 0.59, 0.70);
+    circle(70,120,-250,90);
+    circle(70,120,-100,90);
+    circle(70,120,50,100);
+    circle(70,120,200,90);
+}
+void soil_n(){
+    glColor3f(0.31, 0.47, 0.67);
+    rectangle(-300,-10,300,130);
+}
 
 
 
@@ -526,6 +537,8 @@ void night()
 
     sky();
     moon();
+    hill_n();
+    soil_n();
 
     glFlush();
 }
