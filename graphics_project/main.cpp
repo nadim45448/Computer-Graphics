@@ -474,7 +474,44 @@ void train()
     makerail();
     glPopMatrix();
 }
+void make_plane()
+{
+    glColor3f(0.0, 1.0, 0.0);
+    circle(20,15,0,0);
+    rectangle(0,-15,70,15);     //main body
+    glColor3f(0.0, 1.0, 0.0);
+    rectangle1(70,-15,90,35,70,15,90,40);  //backpart
+    glColor3f(0.0, 1.0, 0.0);
+    rectangle1(30,15,50,15,60,35,55,30);   //middle wing
 
+
+glColor3f(1.0, 1.0, 1.0);
+circle(5,5,10,0);
+circle(5,5,30,0);
+circle(5,5,50,0);
+circle(5,5,65,0);
+rectangle(-5,-5,0,10);
+
+
+}
+
+void planeMove(){
+pm=pm-.5;
+    if(pm<-500)
+        pm = 300;
+        glutPostRedisplay();
+}
+
+void plane()
+{
+     planeMove();
+     glPushMatrix();
+     glTranslatef(pm,250,0);
+     make_plane();
+     glPopMatrix();
+
+
+}
 //***************************Night View ***************************************//
 void sky(){
     glColor3f(0.0, 0.0, 0.5);
@@ -645,6 +682,7 @@ void myDisplay()
     bus();
     railLine();
     train();
+    plane();
     glFlush();
 }
 void night()
@@ -666,6 +704,7 @@ void night()
     privatecar();
     railLine();
     train();
+    plane();
 
     glFlush();
 }
