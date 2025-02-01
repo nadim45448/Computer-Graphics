@@ -11,6 +11,7 @@ static float    bm=  400.0;  //for bus
 static float    pm=  300.0; // for plane
 static float    tm=  300.0; // for Train
 
+//***************************Day View ***************************************//
 
 void circle(GLfloat rx,GLfloat ry,GLfloat x,GLfloat y) // for sun, hill
 {
@@ -43,7 +44,6 @@ void hill()
     circle(70,120,50,100);
     circle(70,120,200,90);
 }
-
 
 void rectangle(int x, int y, int x1, int y1)
 {
@@ -122,6 +122,7 @@ void road()
     glColor3f(1.0, 1.0, 1.0);
     rectangle(200,-120,290,-110);
 }
+
 void tree(int a,int b,int c,int d, int e,int f,int g, int h, int i)
 {
     glColor3f(0.0, 0.0, 0.0);
@@ -130,6 +131,7 @@ void tree(int a,int b,int c,int d, int e,int f,int g, int h, int i)
     triangle(e,f,g,h,i);
 
 }
+
 void tree1()
 {
     tree(-270,110,-268,140,-275,140,-263,-269,170);
@@ -151,6 +153,7 @@ void tree1()
     tree(240,110,242,140,235,140,247,241,170);
     tree(270,110,272,140,265,140,277,271,170);
 }
+
 void make_tree2()
 {
     glColor3f(0.0, 0.8, 0.0);
@@ -197,6 +200,7 @@ void tree2()
     glPopMatrix();
 
 }
+
 void college()
 {
     glColor3f(0.73, 0.94, 0.32); //Front Show
@@ -272,6 +276,7 @@ void house()
     rectangle1(220,-9,250,-9,220,40,250,40);
 
 }
+
 void makePrivateCar()
 {
 
@@ -362,6 +367,7 @@ void busmake()
     circle(6,12,-70,-15);
 
 }
+
 void busMove()
 {
     //bm= 400 (x to -x)
@@ -371,6 +377,7 @@ void busMove()
 
     glutPostRedisplay();
 }
+
 void bus()
 {
     glPushMatrix();
@@ -468,13 +475,13 @@ void train()
     glPopMatrix();
 }
 
+//***************************Night View ***************************************//
 
 
 
 void myDisplay()
 {
     glClear(GL_COLOR_BUFFER_BIT);
-
     sun();
     hill();
     soil();
@@ -489,9 +496,6 @@ void myDisplay()
     bus();
     railLine();
     train();
-
-
-
     glFlush();
 }
 
@@ -507,6 +511,34 @@ void mouse(int btn,int state,int x,int y)
     if(btn==GLUT_LEFT_BUTTON && state==GLUT_UP)
         exit(0);
 }
+// Keybord Functionality........
+void my_keyboard(unsigned char key, int x, int y)
+{
+
+    switch (key) {
+        case 'b':
+            glutIdleFunc(busMove);
+            break;
+
+        case 's':
+             glutIdleFunc(NULL);
+             break;
+
+        case 'n':
+             glutDisplayFunc(night);
+             glutPostRedisplay();
+            break;
+
+        case 'd':
+             glutDisplayFunc(myDisplay);
+             glutPostRedisplay();
+             break;
+
+      default:
+            break;
+    }
+
+}
 
 int main(int argc, char** argv)
 {
@@ -521,6 +553,7 @@ int main(int argc, char** argv)
     init(); // set background color light blue
     glutDisplayFunc(myDisplay);
     glutMouseFunc(mouse);
+    glutKeyboardFunc(my_keyboard);
 
     glutMainLoop();
     return 0;
