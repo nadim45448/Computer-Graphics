@@ -664,6 +664,8 @@ void night()
     house_n();
     bus();
     privatecar();
+    railLine();
+    train();
 
     glFlush();
 }
