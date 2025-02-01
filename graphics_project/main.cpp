@@ -544,6 +544,7 @@ void night()
     hill_n();
     soil_n();
     ground_n();
+    road();
 
     glFlush();
 }
