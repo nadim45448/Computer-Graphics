@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1738422988 source:d:\nadim\aiub\fall 24-25\computer graphics\computer graphics\graphics_project\main.cpp
+1738423000 source:d:\nadim\aiub\fall 24-25\computer graphics\computer graphics\graphics_project\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<stdlib.h>
