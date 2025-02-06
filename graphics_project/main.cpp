@@ -26,7 +26,7 @@ void circle(GLfloat rx,GLfloat ry,GLfloat x,GLfloat y) // for sun, hill
     }
     glEnd();
 }
-
+//1
 void sun()
 {
     glPushMatrix();
@@ -35,7 +35,7 @@ void sun()
     circle(20,40,0,0); // sun shape
     glPopMatrix();
 }
-
+//2
 void hill()
 {
     glColor3f(0.5, 0.87, 1.0);
@@ -85,7 +85,7 @@ void rectangle1(int x1,int y1, int x2, int y2, int x3, int y3, int x4, int y4)
     glVertex2d(x2,y2);
     glEnd();
 }
-
+//3
 void soil()
 {
     glColor3f(0.75, 0.75, 0.75);
@@ -326,7 +326,6 @@ void privatecar()
     glTranslatef(cm,-50,0);
     makePrivateCar();
     glPopMatrix();
-
     privatecarMove();
 }
 
@@ -371,7 +370,7 @@ void busmake()
 void busMove()
 {
     //bm= 400 (x to -x)
-    bm=bm-.4;
+    bm=bm-.8;
     if(bm<-350)
         bm = 350;
 
@@ -485,41 +484,44 @@ void make_plane()
     rectangle1(30,15,50,15,60,35,55,30);   //middle wing
 
 
-glColor3f(1.0, 1.0, 1.0);
-circle(5,5,10,0);
-circle(5,5,30,0);
-circle(5,5,50,0);
-circle(5,5,65,0);
-rectangle(-5,-5,0,10);
+    glColor3f(1.0, 1.0, 1.0);
+    circle(5,5,10,0);
+    circle(5,5,30,0);
+    circle(5,5,50,0);
+    circle(5,5,65,0);
+    rectangle(-5,-5,0,10);
 
 
 }
 
-void planeMove(){
-pm=pm-.7;
+void planeMove()
+{
+    pm=pm-.7;
     if(pm<-500)
         pm = 300;
-        glutPostRedisplay();
+    glutPostRedisplay();
 }
 
 void plane()
 {
-     planeMove();
-     glPushMatrix();
-     glTranslatef(pm,250,0);
-     make_plane();
-     glPopMatrix();
+    planeMove();
+    glPushMatrix();
+    glTranslatef(pm,250,0);
+    make_plane();
+    glPopMatrix();
 
 
 }
 //***************************Night View ***************************************//
-void sky(){
+void sky()
+{
     glColor3f(0.0, 0.0, 0.5);
     rectangle(-300,130,300,300);
     glutPostRedisplay();
 
 }
-void moon(){
+void moon()
+{
     glPushMatrix();
     // Move the moon to a position beside the sun
     glTranslated(-160, 260, 0);
@@ -535,22 +537,26 @@ void moon(){
     glPopMatrix();
 
 }
-void hill_n(){
+void hill_n()
+{
     glColor3f(0.28, 0.59, 0.70);
     circle(70,120,-250,90);
     circle(70,120,-100,90);
     circle(70,120,50,100);
     circle(70,120,200,90);
 }
-void soil_n(){
+void soil_n()
+{
     glColor3f(0.31, 0.47, 0.67);
     rectangle(-300,-10,300,130);
 }
-void ground_n(){
-     glColor3f(0.58, 0.52, 0.05);  //Bottom part
-     rectangle(-300,-300,300,-10);  //(x,y,x1,y1)-->(x,y),(x,y1),(x1,y1),(x1,y)
+void ground_n()
+{
+    glColor3f(0.58, 0.52, 0.05);  //Bottom part
+    rectangle(-300,-300,300,-10);  //(x,y,x1,y1)-->(x,y),(x,y1),(x1,y1),(x1,y)
 }
-void make_tree2_n(){
+void make_tree2_n()
+{
     //glColor3f(0.38, 0.61, 0.37);
     glColor3f(0.0, 0.5, 0.0);
     circle(20,30,0,0);
@@ -574,7 +580,8 @@ void make_tree2_n(){
     rectangle1(30,-90,30,-100,55,-70,55,-75);
 
 }
-void tree2_n(){
+void tree2_n()
+{
 
     glPushMatrix();
     glTranslated(-320,120,0);
@@ -593,7 +600,8 @@ void tree2_n(){
     glPopMatrix();
 
 }
-void college_n(){
+void college_n()
+{
     glColor3f(0.61, 0.61, 0.61); //Front show
     rectangle(-100,-9,60,120);
     glColor3f(0.73, 0.73, 0.04); //Top
@@ -601,21 +609,22 @@ void college_n(){
     glColor3f(0.04, 0.53, 0.54); //side
     rectangle1(60,-9,70,0,60,120,70,140);
 
-        glColor3f(0.77, 1.0, 0.77); //windows
-        rectangle(-90,100,-70,80);
-        rectangle(-60,100,-40,80);
-        rectangle(-35,-9,-5,30);
-        rectangle(-30,100,-10,80);
-        rectangle(0,100,20,80);
-        rectangle(30,100,50,80);
+    glColor3f(0.77, 1.0, 0.77); //windows
+    rectangle(-90,100,-70,80);
+    rectangle(-60,100,-40,80);
+    rectangle(-35,-9,-5,30);
+    rectangle(-30,100,-10,80);
+    rectangle(0,100,20,80);
+    rectangle(30,100,50,80);
 
-        rectangle(-90,70,-70,50);
-        rectangle(-60,70,-40,50);
-        rectangle(-30,70,-10,50);
-        rectangle(0,70,20,50);
-        rectangle(30,70,50,50);
+    rectangle(-90,70,-70,50);
+    rectangle(-60,70,-40,50);
+    rectangle(-30,70,-10,50);
+    rectangle(0,70,20,50);
+    rectangle(30,70,50,50);
 }
-void hospital_n(){
+void hospital_n()
+{
     glColor3f(0.65, 0.28, 0.09);  //Front show
     rectangle(-210,-9,-120,150);
     glColor3f(0.81, 0.55, 0.05); //Top
@@ -624,30 +633,31 @@ void hospital_n(){
     rectangle1(-120,-9,-110,0,-120,150,-110,170);
 
 
-        glColor3f(0.77, 1.0, 0.77);
-        rectangle(-170,-9,-155,10);
+    glColor3f(0.77, 1.0, 0.77);
+    rectangle(-170,-9,-155,10);
 
-        rectangle(-140,130,-125,110);  //Right top
-        rectangle(-140,100,-125,80);
-        rectangle(-140,70,-125,50);
-        rectangle(-140,40,-125,20);
+    rectangle(-140,130,-125,110);  //Right top
+    rectangle(-140,100,-125,80);
+    rectangle(-140,70,-125,50);
+    rectangle(-140,40,-125,20);
 
-        rectangle(-160,130,-145,110);
-        rectangle(-160,100,-145,80);
-        rectangle(-160,70,-145,50);
-        rectangle(-160,40,-145,20);
+    rectangle(-160,130,-145,110);
+    rectangle(-160,100,-145,80);
+    rectangle(-160,70,-145,50);
+    rectangle(-160,40,-145,20);
 
-        rectangle(-180,130,-165,110);
-        rectangle(-180,100,-165,80);
-        rectangle(-180,70,-165,50);
-        rectangle(-180,40,-165,20);
+    rectangle(-180,130,-165,110);
+    rectangle(-180,100,-165,80);
+    rectangle(-180,70,-165,50);
+    rectangle(-180,40,-165,20);
 
-        rectangle(-200,130,-185,110); //Left top
-        rectangle(-200,100,-185,80);
-        rectangle(-200,70,-185,50);
-        rectangle(-200,40,-185,20);
+    rectangle(-200,130,-185,110); //Left top
+    rectangle(-200,100,-185,80);
+    rectangle(-200,70,-185,50);
+    rectangle(-200,40,-185,20);
 }
-void house_n(){
+void house_n()
+{
     glColor3f(0.1f, 0.1f, 1.0f); //Front Show
     rectangle1(200,-9,350,-9,200,80,350,80);
     rectangle1(200,80,250,80,200,120,250,120);
@@ -725,27 +735,28 @@ void mouse(int btn,int state,int x,int y)
 void my_keyboard(unsigned char key, int x, int y)
 {
 
-    switch (key) {
-        case 'b':
-            glutIdleFunc(busMove);
-            break;
+    switch (key)
+    {
+    case 'b':
+        glutIdleFunc(busMove);
+        break;
 
-        case 's':
-             glutIdleFunc(NULL);
-             break;
+    case 's':
+        glutIdleFunc(NULL);
+        break;
 
-        case 'n':
-             glutDisplayFunc(night);
-             glutPostRedisplay();
-            break;
+    case 'n':
+        glutDisplayFunc(night);
+        glutPostRedisplay();
+        break;
 
-        case 'd':
-             glutDisplayFunc(myDisplay);
-             glutPostRedisplay();
-             break;
+    case 'd':
+        glutDisplayFunc(myDisplay);
+        glutPostRedisplay();
+        break;
 
-      default:
-            break;
+    default:
+        break;
     }
 
 }
